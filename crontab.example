@@ -1,0 +1,13 @@
+## USAGE
+# Copy this `crontab.example` and rename it `crontab`
+# put the `crontab` file it in the same directory as the example
+# make sure there is a blank line at the end of your `crontab` file
+#
+# Example:
+# - `*/5 * * * *` represents the schedule of the cron job. In this case, it is set to run every 5 minutes. You can change it to fit your needs.
+# - `/scripts/test.sh` is the path to the script you want to run. The repo's `./scripts` dir is bound to the container's `/scripts` dir.
+# - `>` is the redirection operator. It redirects the output to a file.
+# - `/logs/text.log` is the path to the file where you want to log the output. The repo's `./logs` dir is bound to the container's `/logs` dir.
+# - `2>&1` means that both standard output (STDOUT) and standard error (STDERR) will be redirected to the file specified.
+
+*/5 * * * * /scripts/test.sh >> /logs/text.log 2>&1

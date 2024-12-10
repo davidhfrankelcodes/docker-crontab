@@ -1,0 +1,9 @@
+.env
+*.bak
+logs/
+.ssh/
+/notes.txt
+/crontab
+apk-requirements.txt
+.profile
+

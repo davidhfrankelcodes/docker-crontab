@@ -1,0 +1,24 @@
+services:
+  crontab:
+    build: .
+    image: docker-crontab:latest
+    container_name: ${CONTAINER_NAME:-docker-crontab}
+    hostname: ${CONTAINER_HOSTNAME:-crontab}
+    restart: ${RESTART_POLICY:-always}
+    environment:
+      - EDITOR=${EDITOR:-nano}
+    volumes:
+      # Bind the Docker socket to interact with other containers
+      - /var/run/docker.sock:/var/run/docker.sock
+
+      # Bind the host crontab file to a temporary location
+      - ./crontab:/tmp/crontab
+
+      # Bind the scripts directory
+      - ./scripts:/scripts
+
+      # Bind the logs directory
+      - ./logs:/logs
+
+      # If using SSH 
+      - ./.ssh:/root/.ssh
