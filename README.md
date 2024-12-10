@@ -12,10 +12,11 @@ This is your average, everyday `crontab` setup, except shoved into a Docker cont
 ## **How to Use This Masterpiece**
 
 ### 1. **Set It Up**
-First, clone this bad boy:
+First, clone this bad boy and run the init script to make some directories:
 ```bash
 git clone <repository-url>
 cd docker-crontab
+./init.sh
 ```
 
 ### 2. **Customize Your Setup**
