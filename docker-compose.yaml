@@ -1,7 +1,7 @@
 services:
   crontab:
     build: .
-    image: docker-crontab:latest
+    #image: docker-crontab:latest
     container_name: ${CONTAINER_NAME:-docker-crontab}
     hostname: ${CONTAINER_HOSTNAME:-crontab}
     restart: ${RESTART_POLICY:-always}
