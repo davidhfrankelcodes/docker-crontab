@@ -10,4 +10,4 @@
 # - `/logs/text.log` is the path to the file where you want to log the output. The repo's `./logs` dir is bound to the container's `/logs` dir.
 # - `2>&1` means that both standard output (STDOUT) and standard error (STDERR) will be redirected to the file specified.
 
-*/5 * * * * /scripts/test.sh >> /logs/text.log 2>&1
+*/5 * * * * /scripts/test.sh >> /logs/test.log 2>&1
